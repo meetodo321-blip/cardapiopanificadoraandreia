@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panificadora Andréia - Cardápio Digital</title>
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=1.2">
+</head>
+<body>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="logo.jpg" alt="Panificadora Andréia" class="logo-img" onerror="this.style.display='none'">
+            <div class="info-pill-container">
+                <button class="info-pill" id="infoPillBtn" aria-expanded="false" title="Ver informações">
+                    <!-- Clock -->
+                    <svg class="icon-clock text-green" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <!-- Mail -->
+                    <svg class="icon-mail" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <!-- Marker -->
+                    <svg class="icon-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <!-- Chevron -->
+                    <svg class="icon-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="info-dropdown" id="infoDropdown">
+                    <strong style="color:var(--text-main);">Horários:</strong>
+                    <p class="hours-text">
+                        Seg a Sábado: 06:00 às 21:00<br>
+                        Domingo: 06:30 às 13:30<br>
+                        Feriados: 06:30 às 20:00
+                    </p>
+                    <hr style="margin: 10px 0; border: 0; border-top: 1px solid var(--border-color);">
+                    <strong style="color:var(--text-main);">Endereço:</strong>
+                    <p class="hours-text">R. Conselheiro Joaquim Caetano, 1530<br>Nova Granada, Belo Horizonte - MG</p>
+                    <hr style="margin: 10px 0; border: 0; border-top: 1px solid var(--border-color);">
+                    <strong style="color:var(--text-main);">Contato:</strong>
+                    <p class="hours-text" style="margin-bottom: 5px;">Realize suas encomendas</p>
+                    <p class="hours-text" style="font-size: 1rem; color: var(--primary-color);"><strong>Celular: (31) 98468-4088</strong></p>
+                    <p class="hours-text" style="font-size: 1rem; color: var(--primary-color);"><strong>Fixo: (31) 3334-9198</strong></p>
+                    <a href="https://api.whatsapp.com/send/?phone=553198468-4088&text=Ol%C3%A1%2C+V%C3%AD+o+Card%C3%A1pio+e+quero+realizar+um+pedido&type=phone_number&app_absent=0" target="_blank" class="btn-whatsapp">
+                        📲 Pedir no WhatsApp
+                    </a>
+                </div>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="sidebar-nav" id="sidebarNav">
+            <ul style="padding-top:10px;">
+                <li><a href="#salgados" class="nav-link">Salgados</a></li>
+                <li><a href="#roscas-outros" class="nav-link">Roscas e Bolos</a></li>
+                <li><a href="#tortas-salgadas" class="nav-link">Tortas Salgadas</a></li>
+                <li><a href="#tortas-doces" class="nav-link">Tortas Doces</a></li>
+                <li><a href="#doces" class="nav-link">Doces e Bombons</a></li>
+                <li><a href="#coffeebreak" class="nav-link">Coffee Break</a></li>
+                <li><a href="#kits" class="nav-link">Kits Lanche</a></li>
+                <li><a href="#kit-festa" class="nav-link">Kits Festa</a></li>
+                <li><a href="#sanduiches" class="nav-link">Lanches e Tábuas</a></li>
+                <li><a href="#pates" class="nav-link">Patês</a></li>
+                <li><a href="#descartaveis" class="nav-link">Bebidas e Diversos</a></li>
+                <li><a href="#pizza" class="nav-link">Pizzas</a></li>
+                <li><a href="#biscoitos" class="nav-link">Biscoitos e Especiais</a></li>
+                <li><a href="#informacoes" class="nav-link">Informativos</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer" id="sidebarFooter">
+            <div class="contact-info">
+                <strong style="display:block; margin-bottom:5px; color:var(--text-main);">Horários:</strong>
+                <p class="hours-text">
+                    Seg a Sábado: 06:00 às 21:00<br>
+                    Domingo: 06:30 às 13:30<br>
+                    Feriados: 06:30 às 20:00
+                </p>
+                <hr style="margin: 10px 0; border: 0; border-top: 1px solid var(--border-color);">
+                <p>R. Conselheiro Joaquim Caetano, 1530<br>Nova Granada, Belo Horizonte - MG</p>
+                <div style="margin-top: 10px; margin-bottom: 10px;">
+                    <a href="https://www.instagram.com/panificadoraandreia/" target="_blank" style="display:inline-block; margin-right:10px;">Instagram</a>
+                    <a href="#" style="display:inline-block;">Facebook</a>
+                </div>
+                <p class="hours-text" style="margin-bottom:5px; font-size: 1rem; color: var(--primary-color);"><strong>Celular: (31) 98468-4088</strong></p>
+                <p class="hours-text" style="margin-bottom:5px; font-size: 1rem; color: var(--primary-color);"><strong>Fixo: (31) 3334-9198</strong></p>
+                <a href="https://api.whatsapp.com/send/?phone=553198468-4088&text=Ol%C3%A1%2C+V%C3%AD+o+Card%C3%A1pio+e+quero+realizar+um+pedido&type=phone_number&app_absent=0" target="_blank" class="btn-whatsapp">
+                    📲 Pedir no WhatsApp
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <section class="hero" id="topo">
+            <div class="hero-content">
+                <h1>BEM VINDOS!</h1>
+                <p>Descubra produtos deliciosos, fresquinhos e feitos com muito carinho para você.</p>
+                <div style="margin-top: 15px;">
+                    <a href="#cardapio-inicio" class="btn-primary">Ver Cardápio</a>
+                </div>
+                <div style="margin-top: 20px;">
+                    <a href="https://www.instagram.com/panificadoraandreia/" target="_blank" style="display:inline-block; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'" title="Siga nosso Instagram!">
+                        <img src="instagram-icon.png" alt="Siga nosso Instagram" style="width: 50px; height: 50px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MENU HORIZONTAL DE CATEGORIAS -->
+        <nav class="horizontal-nav" id="cardapio-inicio">
+            <ul class="h-nav-list">
+                <li><a href="#topo" class="h-nav-link active">BEM VINDOS!</a></li>
+                <li><a href="#salgados" class="h-nav-link">SALGADOS</a></li>
+                <li><a href="#roscas-outros" class="h-nav-link">PÃES/BOLOS</a></li>
+                <li><a href="#tortas-salgadas" class="h-nav-link">TORTAS SALGADAS</a></li>
+                <li><a href="#tortas-doces" class="h-nav-link">TORTAS DOCES</a></li>
+                <li><a href="#doces" class="h-nav-link">DOCES/BOMBONS</a></li>
+                <li><a href="#coffeebreak" class="h-nav-link">COFFEE BREAK</a></li>
+                <li><a href="#kits" class="h-nav-link">KITS LANCHE</a></li>
+                <li><a href="#kit-festa" class="h-nav-link">KITS FESTA</a></li>
+                <li><a href="#sanduiches" class="h-nav-link">LANCHES</a></li>
+                <li><a href="#pates" class="h-nav-link">PATÊS</a></li>
+                <li><a href="#descartaveis" class="h-nav-link">BEBIDAS/DIVERSOS</a></li>
+                <li><a href="#pizza" class="h-nav-link">PIZZAS</a></li>
+                <li><a href="#biscoitos" class="h-nav-link">BISCOITOS/ESPECIAIS</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-sections">
+            <section id="salgados" class="menu-category">
+                <h2 style="font-size:1.5rem; text-transform:uppercase; border-bottom: 2px solid var(--primary-color);">Salgados (Cento)</h2>
+                <div class="products-grid">
+                    <article class="product-card">
+                        <div class="product-image" style="background-image: url('img/coxinha-nova.jpg'); background-position: center 90%; background-size: cover;">
+                            <h3 class="product-title">Coxinha, Quibe e Bolinhas</h3>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-desc">Coxinha comum 95,00 / Bolinha presunto 95,00 / Bolinha de Bacalhau 130,00</p>
+                            <div class="product-price-wrapper"><span class="price-prefix">A partir de</span><span class="product-price">95,00</span></div>
+                        </div>
+                    </article>
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/empadas-diversas-real.jpeg');"><h3 class="product-title">Empadas Diversas</h3></div><div class="product-info"><p class="product-desc">Queijo, Frango, Palmito: 105,00 / Camarão: 150,00</p><div class="product-price-wrapper"><span class="price-prefix">A partir de</span><span class="product-price">105,00</span></div></div></article>
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/pasteis-real.jpeg');"><h3 class="product-title">Pastéis (Assados e Fritos)</h3></div><div class="product-info"><p class="product-desc">Comuns: 95,00 / Português: 105,00 / Assados: 95,00</p><div class="product-price-wrapper"><span class="price-prefix">A partir de</span><span class="product-price">95,00</span></div></div></article>
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/pao-de-queijo-real.jpeg'); background-position: center center;"><h3 class="product-title">Pães de Queijo e Mini Esfirras</h3></div><div class="product-info"><p class="product-desc">Pão de queijo 95,00 / Mini Esfirra 95,00 / Hot dog 150,00</p><div class="product-price-wrapper"><span class="price-prefix">A partir de</span><span class="product-price">95,00</span></div></div></article>
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/croassant-real.jpg'); background-position: center bottom;"><h3 class="product-title">Croissants e Quiche</h3></div><div class="product-info"><p class="product-desc">Quiche Alho Poró: 150,00 / Croissant vários sabores: 160,00</p><div class="product-price-wrapper"><span class="price-prefix">A partir de</span><span class="product-price">150,00</span></div></div></article>
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/canapes.png');"><h3 class="product-title">Canapés</h3></div><div class="product-info"><p class="product-desc">Canapés de ovos de codorna ao creme.</p><div class="product-price-wrapper"><span class="price-prefix">R$</span><span class="product-price">150,00</span></div></div></article>
+                </div>
+            </section>
+            <section id="roscas-outros" class="menu-category">
+                <h2 style="font-size:1.5rem; text-transform:uppercase; border-bottom: 2px solid var(--primary-color);">Roscas, Bolos e Pães</h2>
+                <div class="products-grid">
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/tabuleiro-bolo.png');"><h3 class="product-title">Tabuleiros de Bolo e Cake</h3></div><div class="product-info"><p class="product-desc">Bolo comum 100,00 / Especial Cake 120,00</p><div class="product-price-wrapper"><span class="price-prefix">A partir de</span><span class="product-price">100,00</span></div></div></article>
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/bolo-redondo-real.jpeg');"><h3 class="product-title">Bolos Redondos</h3></div><div class="product-info"><p class="product-desc">Cenoura c/ chocolate ou Limão. Grande: 70,00 / Pequeno 25,00</p><div class="product-price-wrapper"><span class="price-prefix">A partir de</span><span class="product-price">25,00</span></div></div></article>
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/roscas-brioches-real.jpeg'); background-position: center center;"><h3 class="product-title">Roscas e Brioches</h3></div><div class="product-info"><p class="product-desc">Rosca c/ frutas, abacaxi, coco: 18,00 / Brioche: 25,00</p><div class="product-price-wrapper"><span class="price-prefix">A partir de</span><span class="product-price">18,00</span></div></div></article>
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/paes-granel-real.jpeg');"><h3 class="product-title">Pães a Granel</h3></div><div class="product-info"><p class="product-desc">Mini pão: 65,00 cento / Sírio 85,00 cento / Pão Francês 1,00 un</p><div class="product-price-wrapper"><span class="price-prefix">A partir de</span><span class="product-price">1,00</span></div></div></article>
+                </div>
+            </section>
+            <section id="tortas-salgadas" class="menu-category">
+                <h2 style="font-size:1.5rem; text-transform:uppercase; border-bottom: 2px solid var(--primary-color);">Tortas Salgadas</h2>
+                <div class="products-grid">
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/torta-salgada.png');"><h3 class="product-title">Frango e Palmito</h3></div><div class="product-info"><p class="product-desc">Brotinhos (8 fat) a partir de 49,00 / Comum (16 fat) de 95 a 105</p><div class="product-price-wrapper"><span class="price-prefix">A partir de</span><span class="product-price">49,00</span></div></div></article>
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/torta-camarao.png');"><h3 class="product-title">Bacalhau ou Camarão</h3></div><div class="product-info"><p class="product-desc">Frutos do mar super frescos para 16 pessoas.</p><div class="product-price-wrapper"><span class="price-prefix">A partir de</span><span class="product-price">200,00</span></div></div></article>
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/torta-pao-de-forma.png');"><h3 class="product-title">Torta Frango Pão de Forma</h3></div><div class="product-info"><p class="product-desc">G (20 pes) 160 / M (12 pes) 120 / P (8 pes) 80</p><div class="product-price-wrapper"><span class="price-prefix">A partir de</span><span class="product-price">80,00</span></div></div></article>
+                </div>
+            </section>
+            <section id="tortas-doces" class="menu-category">
+                <h2 style="font-size:1.5rem; text-transform:uppercase; border-bottom: 2px solid var(--primary-color);">Tortas Doces</h2>
+                <p style="margin-bottom: 20px; color: #666; font-style: italic;">Clique nas categorias para ver sabores e preços detalhados.</p>
+                <div class="products-grid">
+                    <!-- TAMANHOS PADRÃO -->
+                    <article class="product-card">
+                        <div class="product-image" style="background-image:url('img/torta-doce-nova.jpg'); background-position: center bottom;">
+                            <h3 class="product-title">Tamanhos Pequenos</h3>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-desc">PPP (6p) e PP (10p). Clique para ver sabores.</p>
+                            <div class="product-price-wrapper"><span class="price-prefix">A partir de</span><span class="product-price">95,00</span></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image" style="background-image:url('img/torta-doce-nova.jpg'); background-position: center bottom;">
+                            <h3 class="product-title">Médias e Grandes</h3>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-desc">De 20 a 150 convidados. Clique para ver sabores.</p>
+                            <div class="product-price-wrapper"><span class="price-prefix">A partir de</span><span class="product-price">160,00</span></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image" style="background-image:url('img/torta-doce-nova.jpg'); background-position: center bottom;">
+                            <h3 class="product-title">Sabores Especiais</h3>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-desc">Nozes, Kit Kat, Morango c/ Suspiro e mais. Clique para ver.</p>
+                            <div class="product-price-wrapper"><span class="price-prefix">A partir de</span><span class="product-price">120,00</span></div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section id="doces" class="menu-category">
+                <h2 style="font-size:1.5rem; text-transform:uppercase; border-bottom: 2px solid var(--primary-color);">Doces e Bombons (Cento)</h2>
+                <div class="products-grid">
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/doces-tradicionais.png');"><h3 class="product-title">Doces Tradicionais</h3></div><div class="product-info"><p class="product-desc">Brigadeiro, Cajuzinho, Moranguinho, Palha italiana, etc.</p><div class="product-price-wrapper"><span class="price-prefix">R$</span><span class="product-price">145,00</span></div></div></article>
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/doces-tradicionais.png');"><h3 class="product-title">Bombons e Especiais</h3></div><div class="product-info"><p class="product-desc">Bombons Brigadeiro/Coco/Abacaxi: 220,00 a 250,00 / Quindim 180,00</p><div class="product-price-wrapper"><span class="price-prefix">A partir de</span><span class="product-price">180,00</span></div></div></article>
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/bombom-morango.png');"><h3 class="product-title">Bombom Morango Inteiro</h3></div><div class="product-info"><p class="product-desc">Delicioso bombom trufado com o morango inteiro fresco.</p><div class="product-price-wrapper"><span class="price-prefix">R$</span><span class="product-price">600,00</span></div></div></article>
+                </div>
+            </section>
+            <section id="coffeebreak" class="menu-category">
+                <h2 style="font-size:1.5rem; text-transform:uppercase; border-bottom: 2px solid var(--primary-color);">Coffee Break</h2>
+                <p style="margin-bottom: 20px; color: var(--text-muted); line-height: 1.5; font-size: 0.95rem;">
+                    <em>Sem serviço, entregamos no local.</em>
+                </p>
+                <div class="products-grid">
+                    <article class="product-card">
+                        <div class="product-image" style="background-image:url('img/kit-coffeebreak.png');"><h3 class="product-title">Combos Coffee Break</h3></div>
+                        <div class="product-info">
+                            <p class="product-desc">Combos c/ mini sandúíches, salgados, sucos, refri e descartáveis (De 6 a 50 pessoas).</p>
+                            <div class="product-price-wrapper">
+                                <span class="price-prefix">A partir de</span>
+                                <span class="product-price">140,00</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-image" style="background-image:url('img/salada-frutas-real.jpeg');"><h3 class="product-title">Itens Avulsos Coffee Break</h3></div>
+                        <div class="product-info">
+                            <p class="product-desc">Frutas, bolos e garrafa de café p/ acompanhar seu evento.</p>
+                            <div class="product-price-wrapper">
+                                <span class="price-prefix">A partir de</span>
+                                <span class="product-price">8,00</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section id="kits" class="menu-category">
+                <h2 style="font-size:1.5rem; text-transform:uppercase; border-bottom: 2px solid var(--primary-color);">Kits Lanche</h2>
+                <p style="margin-bottom: 20px; color: var(--text-muted); line-height: 1.5; font-size: 0.95rem;">
+                    <strong>Atenção:</strong> Frete não está incluso. <br>
+                    <em>O sandúíche natural grande das opções 5, 6 e 7 pode ser substituído por: Tortinha de frango, Hamburgão, Pão de queijo recheado, Coxinha (com ou sem catupiry) ou Enrolado assado c/ presunto e mussarela.</em>
+                </p>
+                <div class="products-grid">
+                    <article class="product-card">
+                        <div class="product-image" style="background-image:url('img/kit-coffeebreak.png');"><h3 class="product-title">Kits Lanche (Opções 1 a 7)</h3></div>
+                        <div class="product-info">
+                            <p class="product-desc">Kits completos c/ salgados, sandúíches, sucos e acompanhamentos (Ideal p/ eventos).</p>
+                            <div class="product-price-wrapper">
+                                <span class="price-prefix">A partir de</span>
+                                <span class="product-price">18,50</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section id="kit-festa" class="menu-category">
+                <h2 style="font-size:1.5rem; text-transform:uppercase; border-bottom: 2px solid var(--primary-color);">Kits Festa e na Caixa</h2>
+                <p style="margin-bottom: 20px; color: var(--text-muted); line-height: 1.5; font-size: 0.95rem;">
+                    <em><strong>OBS:</strong> Os Kits NÃO incluem descartáveis nem frete. Favor consultar os valores adicionais.</em>
+                </p>
+                <div class="products-grid">
+                    <article class="product-card">
+                        <div class="product-image" style="background-image:url('img/kitfestaempresa-real.jpeg');"><h3 class="product-title">Kit Festa (Empresa)</h3></div>
+                        <div class="product-info">
+                            <p class="product-desc">Kits completos de 25 a 50 pessoas com salgados tradicionais, bolo decorado e refrigerantes.</p>
+                            <div class="product-price-wrapper">
+                                <span class="price-prefix">A partir de</span>
+                                <span class="product-price">385,25</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-image" style="background-image:url('img/kitfestainfantil1.jpeg');"><h3 class="product-title">Kit Festa Infantil</h3></div>
+                        <div class="product-info">
+                            <p class="product-desc">Quantidades calculadas para 20 a 40 crianças. Inclui docinhos, bolo, salgados e refrigerantes.</p>
+                            <div class="product-price-wrapper">
+                                <span class="price-prefix">A partir de</span>
+                                <span class="product-price">317,00</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-image" style="background-image:url('img/festa-caixa.png');"><h3 class="product-title">Festa na Caixa</h3></div>
+                        <div class="product-info">
+                            <p class="product-desc">Ideal p/ 5 pessoas (Bolo PPP, 40 salgadinhos e 20 docinhos). Opção c/ refrigerante.</p>
+                            <div class="product-price-wrapper">
+                                <span class="price-prefix">A partir de</span>
+                                <span class="product-price">180,00</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section id="sanduiches" class="menu-category">
+                <h2 style="font-size:1.5rem; text-transform:uppercase; border-bottom: 2px solid var(--primary-color);">Lanches, Tábuas e Baguetes</h2>
+                <div class="products-grid">
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/baguetes-recheadas.png');"><h3 class="product-title">Baguetes (16 pedços)</h3></div><div class="product-info"><p class="product-desc">Tradicional, Italiana, Calabresa ou Light.</p><div class="product-price-wrapper"><span class="price-prefix">A partir de</span><span class="product-price">65,00</span></div></div></article>
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/mini-sanduiches.png');"><h3 class="product-title">Mini Sandúíches</h3></div><div class="product-info"><p class="product-desc">Sírio Recheado ou Mini Especial (Patê, peito de peru, etc)</p><div class="product-price-wrapper"><span class="price-prefix">Cada</span><span class="product-price">4,00</span></div></div></article>
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/tabuadefrios-real.jpeg');"><h3 class="product-title">Tábuas Frios/Frutas</h3></div><div class="product-info"><p class="product-desc">Frios p/ 15 pessoas: 200,00 / Frutas Mistas: 250,00.</p><div class="product-price-wrapper"><span class="price-prefix">A partir de</span><span class="product-price">200,00</span></div></div></article>
+                </div>
+            </section>
+
+            <section id="pates" class="menu-category">
+                <h2 style="font-size:1.5rem; text-transform:uppercase; border-bottom: 2px solid var(--primary-color);">Patês (Kg)</h2>
+                <div class="products-grid">
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/pates-diversos.png');"><h3 class="product-title">Alho, Ervas ou Azeitona</h3></div><div class="product-info"><p class="product-desc">Opções clássicas c/ maionese e ricota.</p><div class="product-price-wrapper"><span class="price-prefix">Kg</span><span class="product-price">45,00</span></div></div></article>
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/pates-diversos.png');"><h3 class="product-title">Frango e Presuntos</h3></div><div class="product-info"><p class="product-desc">Frango temperado, abacaxi, bacon e afins.</p><div class="product-price-wrapper"><span class="price-prefix">Kg</span><span class="product-price">60,00</span></div></div></article>
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/pates-diversos.png');"><h3 class="product-title">Queijos e Premium</h3></div><div class="product-info"><p class="product-desc">Provolone, Parmesão, Atum, Peito de Peru Def e Salaminho.</p><div class="product-price-wrapper"><span class="price-prefix">Kg</span><span class="product-price">70,00</span></div></div></article>
+                </div>
+            </section>
+            <section id="descartaveis" class="menu-category">
+                <h2 style="font-size:1.5rem; text-transform:uppercase; border-bottom: 2px solid var(--primary-color);">Bebidas e Diversos</h2>
+                <div class="products-grid">
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/refrigerantes.png');"><h3 class="product-title">Refrigerantes 2 Litros</h3></div><div class="product-info"><p class="product-desc">Coca (14) / Fanta, Sprite, Guaraná, Mate (13)</p><div class="product-price-wrapper"><span class="price-prefix">A partir de</span><span class="product-price">13,00</span></div></div></article>
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/suco-tial.jpg'); background-position: center center; background-size: contain; background-color: #fff;"><h3 class="product-title">Sucos e Copos 100u</h3></div><div class="product-info"><p class="product-desc">Sucos Tial 8,50 / Descartáveis variam entre R$ 3 e R$ 9.</p><div class="product-price-wrapper"><span class="price-prefix">A partir de</span><span class="product-price">3,50</span></div></div></article>
+                </div>
+            </section>
+
+            <section id="pizza" class="menu-category">
+                <h2 style="font-size:1.5rem; text-transform:uppercase; border-bottom: 2px solid var(--primary-color);">Pizzas</h2>
+                <div class="products-grid">
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/pizza-gigante.png');"><h3 class="product-title">Pizza Gigante</h3></div><div class="product-info"><p class="product-desc">Pizza à moda da casa ou Frango c/ Catupiry</p><div class="product-price-wrapper"><span class="price-prefix">A partir de</span><span class="product-price">49,90</span></div></div></article>
+                </div>
+            </section>
+
+            <section id="biscoitos" class="menu-category">
+                <h2 style="font-size:1.5rem; text-transform:uppercase; border-bottom: 2px solid var(--primary-color);">Biscoitos, Rabanada e Especiais</h2>
+                <div class="products-grid">
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/biscoitos.png');"><h3 class="product-title">Biscoitos e Rabanada</h3></div><div class="product-info"><p class="product-desc">Biscoito doce c/ canela, polvilho sal e Rabanada</p><div class="product-price-wrapper"><span class="price-prefix">A partir de</span><span class="product-price">40,00</span></div></div></article>
+                    <article class="product-card"><div class="product-image" style="background-image:url('img/carolinalimao.png');"><h3 class="product-title">Carolina de Limão</h3></div><div class="product-info"><p class="product-desc">Carolina de limão artesanal, por cento</p><div class="product-price-wrapper"><span class="price-prefix">R$</span><span class="product-price">180,00</span></div></div></article>
+                </div>
+            </section>
+
+            <section id="informacoes" class="menu-category" style="margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border-color);">
+                <h2 style="font-size:1.8rem; color: var(--text-main); margin-bottom: 1rem;">Informativo</h2>
+                <div style="background-color: var(--card-bg); padding: 20px; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
+                    <ul style="list-style: none; padding:0; margin:0; color: var(--text-muted); line-height: 1.8;">
+                        <li style="margin-bottom:10px;"><strong style="color:var(--text-main)">⚠️ As encomendas devem ser realizadas com antecedência:</strong></li>
+                        <li>🍞 Pedidos grandes: <strong>7 dias</strong> de antecedência.</li>
+                        <li>🛍️ Pedidos menores: <strong>2 dias</strong> de antecedência.</li>
+                        <li style="margin-top:10px;">📱 <em>Encomendas realizadas via WhatsApp ou e-mail precisam ser confirmadas para serem finalizadas. Sem confirmação a encomenda não será produzida!</em></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- MODAL POPUP -->
+    <div id="productModal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="closeModal" class="modal-close" aria-label="Fechar">&times;</button>
+            <div class="modal-header-bg">
+                <h3 id="modalTitle" class="modal-title">Detalhes</h3>
+                <p id="modalObs" class="modal-obs"></p>
+            </div>
+            <div class="modal-body">
+                <ul id="modalVariations" class="modal-variations-list">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+                    <a href="https://api.whatsapp.com/send/?phone=553198468-4088&text=Ol%C3%A1%2C+V%C3%AD+o+Card%C3%A1pio+e+quero+realizar+um+pedido&type=phone_number&app_absent=0" target="_blank" class="whatsapp-float" aria-label="Fazer Pedido pelo WhatsApp">
+        <img src="whatsapp-button.png" alt="Fale direto pelo Whatsapp">
+    </a>
+
+    <footer style="text-align: center; padding: 20px 20px 40px; background: #fafafa; border-top: 1px solid #eee; margin-top: 40px;">
+        <p style="font-size: 0.8rem; color: #777; font-style: italic; margin-bottom: 8px;">
+            *Imagens são ilustrativas e os valores podem sofrer alterações consultar.*
+        </p>
+        <p style="font-size: 0.85rem; color: #555;">&copy; 2026 Panificadora Andréia. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
